@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Ground
+  - DeathZone
+  - Spike
+  - BagText
+  - Bag
+  - SlowGround
+  - Ice
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Sky
+  - Water
+  - Mountains
+  - Icebergs
+  - Forest
+  - Bags
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Sky
+    uniqueID: 673257237
+    locked: 0
+  - name: Clouds
+    uniqueID: 3727144925
+    locked: 0
+  - name: Water
+    uniqueID: 2761176217
+    locked: 0
+  - name: Mountains
+    uniqueID: 3794430687
+    locked: 0
+  - name: IceBerg
+    uniqueID: 3757461907
+    locked: 0
+  - name: Character
+    uniqueID: 625140023
+    locked: 0
+  - name: Forest
+    uniqueID: 2469502387
+    locked: 0
+  - name: Bags
+    uniqueID: 3376477449
+    locked: 0
+  m_RenderingLayers:
+  - Default
