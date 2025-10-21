@@ -7,6 +7,7 @@ public class ItemBehaviourScript : MonoBehaviour
         if (!other.CompareTag("Player")) return;
 
         GameManager.Instance?.AddBag();
+        ItemBank.Instance?.AddItems(1);
         Destroy(gameObject);
     }
 }
