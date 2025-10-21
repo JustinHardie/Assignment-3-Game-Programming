@@ -5,7 +5,7 @@ using System.Collections;
 public class OilEffect : MonoBehaviour
 {
     public Image oilImage;
-    public float maxAlpha = 1f;
+    public float maxAlpha = 0.5f;
     public float fadeInTime = 0.15f;
     public float fadeOutTime = 0.3f;
 

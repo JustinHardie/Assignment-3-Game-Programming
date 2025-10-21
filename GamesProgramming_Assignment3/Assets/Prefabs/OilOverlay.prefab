@@ -89,6 +89,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oilImage: {fileID: 1741869166293508716}
-  maxAlpha: 1
+  maxAlpha: 0.9
   fadeInTime: 0.15
   fadeOutTime: 0.3
