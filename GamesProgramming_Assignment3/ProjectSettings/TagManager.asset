@@ -11,6 +11,7 @@ TagManager:
   - Bag
   - SlowGround
   - Ice
+  - Splash
   layers:
   - Default
   - TransparentFX

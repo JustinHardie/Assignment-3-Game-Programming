@@ -4,7 +4,8 @@ using UnityEngine;
 public class HaydenMovement : MonoBehaviour
 {
     public float jumpForce = 12f;
-    private bool isGrounded = false;
+    public bool isGrounded = false;
+    [SerializeField] SpriteRenderer splashSR;
 
     void Update()
     {
@@ -14,11 +15,17 @@ public class HaydenMovement : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             isGrounded = false;
         }
+
+        if (!splashSR)
+        splashSR = GameObject.FindGameObjectWithTag("Splash")?.GetComponent<SpriteRenderer>();
+
     }
 
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Ground")
             isGrounded = true;
+        
+        if (splashSR) splashSR.enabled = isGrounded;
     }
 }
