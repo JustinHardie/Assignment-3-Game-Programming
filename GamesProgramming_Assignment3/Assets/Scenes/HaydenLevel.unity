@@ -609,6 +609,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &165903696 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6492266117774532182, guid: 766aa3eca1eec4b458789e3612b3ebef, type: 3}
+  m_PrefabInstance: {fileID: 4439823031318132956}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &185472829
 GameObject:
   m_ObjectHideFlags: 0
@@ -4557,7 +4562,7 @@ MonoBehaviour:
   bagCounterText: {fileID: 1962196419}
   winPanel: {fileID: 885838644}
   losePanel: {fileID: 2026669525}
-  nextLevelButton: {fileID: 0}
+  nextLevelButton: {fileID: 165903696}
   persistent: 0
 --- !u!4 &2068252793
 Transform:
