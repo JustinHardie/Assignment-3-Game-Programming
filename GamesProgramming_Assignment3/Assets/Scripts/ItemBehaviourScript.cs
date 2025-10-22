@@ -6,8 +6,16 @@ public class ItemBehaviourScript : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;
 
-        GameManager.Instance?.AddBag();
         ItemBank.Instance?.AddItems(1);
+        GameManager.Instance?.AddBag();
+        var bar = FindFirstObjectByType<BagProgressBar>();
+        if (bar != null)
+        {
+            bar.AddBag();
+        }
+
         Destroy(gameObject);
     }
 }
+
+ 
