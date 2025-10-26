@@ -2289,6 +2289,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 956143485801074339, guid: b728e06946e3bcd4b8e5158aa0c0b1c1, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 956143485801074339, guid: b728e06946e3bcd4b8e5158aa0c0b1c1, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8034983692015161990, guid: b728e06946e3bcd4b8e5158aa0c0b1c1, type: 3}
       propertyPath: m_Name
       value: OilBarrel (1)
@@ -3527,7 +3535,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9007921001148849712, guid: 970d1de4ec57bbf44bc9e960d663fc9e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 19.6
+      value: 19.599976
       objectReference: {fileID: 0}
     - target: {fileID: 9007921001148849712, guid: 970d1de4ec57bbf44bc9e960d663fc9e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4788,6 +4796,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 956143485801074339, guid: b728e06946e3bcd4b8e5158aa0c0b1c1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 956143485801074339, guid: b728e06946e3bcd4b8e5158aa0c0b1c1, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 956143485801074339, guid: b728e06946e3bcd4b8e5158aa0c0b1c1, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8034983692015161990, guid: b728e06946e3bcd4b8e5158aa0c0b1c1, type: 3}
       propertyPath: m_Name
       value: OilBarrel
