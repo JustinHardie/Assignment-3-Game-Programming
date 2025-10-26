@@ -5,27 +5,41 @@ public class HaydenMovement : MonoBehaviour
 {
     public float jumpForce = 12f;
     public bool isGrounded = false;
-    [SerializeField] SpriteRenderer splashSR;
+    [SerializeField] private SpriteRenderer splashSR;
+
+    private Rigidbody2D rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+
+        // Get splash sprite renderer if not assigned in Inspector
+        if (!splashSR)
+            splashSR = GameObject.FindGameObjectWithTag("Splash")?.GetComponent<SpriteRenderer>();
+    }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            var rb = GetComponent<Rigidbody2D>();
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             isGrounded = false;
         }
 
-        if (!splashSR)
-        splashSR = GameObject.FindGameObjectWithTag("Splash")?.GetComponent<SpriteRenderer>();
-
+        // Update visibility continuously
+        if (splashSR)
+            splashSR.enabled = isGrounded;
     }
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "Ground")
+        if (col.gameObject.CompareTag("Ground"))
             isGrounded = true;
-        
-        if (splashSR) splashSR.enabled = isGrounded;
+    }
+
+    void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("Ground"))
+            isGrounded = false;
     }
 }
