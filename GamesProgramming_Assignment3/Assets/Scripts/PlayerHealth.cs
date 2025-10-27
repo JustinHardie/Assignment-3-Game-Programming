@@ -1,12 +1,20 @@
 using UnityEngine;
 using TMPro;
 using System; // for Action
+using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
     [Header("Health")]
     public int maxHealth = 3;
     public TMP_Text healthText;                 // optional numeric UI
+
+    [Header("Audio")]
+    public AudioClip hitSound;
+    private AudioSource audioSource;
+
+    [Header("Damage Feedback")]
+    public float flashDuration = 0.2f;
 
     public int CurrentHealth { get; private set; }
     public event Action<int, int> OnHealthChanged; // (current, max)
@@ -24,6 +32,9 @@ public class PlayerHealth : MonoBehaviour
         rb  = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
         sr  = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
+        if (!audioSource)
+            audioSource = gameObject.AddComponent<AudioSource>();
         Notify();
     }
 
@@ -34,8 +45,26 @@ public class PlayerHealth : MonoBehaviour
         CurrentHealth = Mathf.Max(0, CurrentHealth - dmg);
         Notify();
 
+        if (hitSound != null && audioSource != null)
+        {
+            audioSource.pitch = UnityEngine.Random.Range(0.95f, 1.05f);
+            audioSource.PlayOneShot(hitSound);
+        }
+
+        // Flash red
+        if (sr != null)
+            StartCoroutine(FlashRed(flashDuration));
+
         if (CurrentHealth <= 0)
             Die();
+    }
+
+    private IEnumerator FlashRed(float duration)
+    {
+        Color originalColor = sr.color;
+        sr.color = Color.red;           // turn red
+        yield return new WaitForSeconds(duration);
+        sr.color = originalColor;       // revert to original
     }
 
     void Notify()
