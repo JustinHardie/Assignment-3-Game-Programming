@@ -15,6 +15,10 @@ public class PlayerBehaviourScript : MonoBehaviour
     [Tooltip("How quickly horizontal speed blends toward input on ice (lower = more slide).")]
     public float iceLerp = 0.05f;         // 0.03–0.08 feels nice and slidey
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip jumpSound;
+
     private bool isGrounded = false;
     private bool onSlowGround = false;
     private bool onIce = false;
@@ -64,6 +68,13 @@ public class PlayerBehaviourScript : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             isGrounded = false;
+
+             // Play jump sound
+            if (jumpSound != null && audioSource != null)
+            {
+                audioSource.pitch = Random.Range(0.95f, 1.05f);  // adds variation
+                audioSource.PlayOneShot(jumpSound);
+            }
         }
     }
 
