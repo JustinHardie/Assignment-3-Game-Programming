@@ -18,12 +18,16 @@ public class ItemBehaviourScript : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;
 
-        if (pickupSound != null && audioSource != null)
+        ItemBank.Instance?.AddItems(1);
+        GameManager.Instance?.AddBag();
+        var bar = FindFirstObjectByType<BagProgressBar>();
+        if (bar != null)
         {
-            audioSource.PlayOneShot(pickupSound, 0.35f);
+            bar.AddBag();
         }
 
-        GameManager.Instance?.AddBag();
-        Destroy(gameObject, pickupSound.length);
+        Destroy(gameObject);
     }
 }
+
+ 
