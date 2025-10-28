@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    [Header("Level Buttons in order (Level 1, 2, 3)")]
+    [Header("Level Buttons in order (Level 1, 2, 3, 4)")]
     public Button[] levelButtons;
 
     [Header("Optional: requirement labels aligned with buttons")]
@@ -13,6 +13,8 @@ public class LevelManager : MonoBehaviour
     // Gates
     private const int REQ_LEVEL_2 = 12;
     private const int REQ_LEVEL_3 = 24;
+
+    private const int REQ_LEVEL_4 = 36;
 
     void Start()
     {
@@ -31,6 +33,10 @@ public class LevelManager : MonoBehaviour
         // Level 3: needs 24 items
         bool l3 = items >= REQ_LEVEL_3;
         SetButtonState(2, l3, l3 ? "" : $"Requires {REQ_LEVEL_3} items");
+
+        // Level 4: needs 36 items
+        bool l4 = items >= REQ_LEVEL_3;
+        SetButtonState(3, l4, l4 ? "" : $"Requires {REQ_LEVEL_4} items");
     }
 
     private void SetButtonState(int index, bool interactable, string label)
