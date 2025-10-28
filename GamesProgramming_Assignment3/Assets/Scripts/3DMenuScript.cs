@@ -6,7 +6,7 @@ public class LevelMenu3D : MonoBehaviour
     public void OnStartClick()
     {
         // Load your 2D level scene
-        SceneManager.LoadScene("Start Menu");
+        SceneManager.LoadScene("LevelSelectorScene");
 
     }
 }

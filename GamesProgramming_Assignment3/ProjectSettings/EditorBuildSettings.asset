@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/StartMenu.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/3Dmenu.unity
+    guid: 5b25ee473ae46b84db0e54afb4b2d5a8
   - enabled: 1
     path: Assets/Scenes/LevelSelectorScene.unity
     guid: 73dac42b713475c419d5031cbf89bf56
@@ -21,8 +21,8 @@ EditorBuildSettings:
     path: Assets/Scenes/JustinLevel.unity
     guid: df2f0701d16dcc44fbbf30084932b0d0
   - enabled: 1
-    path: Assets/Scenes/3Dmenu.unity
-    guid: 5b25ee473ae46b84db0e54afb4b2d5a8
+    path: Assets/Scenes/AdityaLevel.unity
+    guid: ad31b296b39aa7a42916f8beea41a48e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
