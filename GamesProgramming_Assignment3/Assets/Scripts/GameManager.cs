@@ -20,6 +20,12 @@ public class GameManager : MonoBehaviour
     [Header("Options")]
     [SerializeField] private bool persistent = true; // set true if you want this to persist across scenes
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource; // drag in the Inspector
+    [SerializeField] private AudioClip winSound;
+    [SerializeField] private AudioClip loseSound;
+    private AudioSource musicPlayer;
+
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -38,6 +44,10 @@ public class GameManager : MonoBehaviour
 
         Time.timeScale = 1f;   // ensure unpaused on play
         UpdateBagUI();
+        
+        GameObject musicObject = GameObject.Find("MusicPlayer");
+        if (musicObject)
+            musicPlayer = musicObject.GetComponent<AudioSource>();
     }
 
     public void AddBag()
@@ -62,9 +72,31 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void Win() => ShowPanel(winPanel);
+    public void Win()
+    {
+        StopMusic();
+        PlaySound(winSound);
+        ShowPanel(winPanel);
+    }
 
-    public void Lose() => ShowPanel(losePanel);
+    public void Lose()
+    {
+        StopMusic();
+        PlaySound(loseSound);
+        ShowPanel(losePanel);
+    }
+
+    void StopMusic()
+    {
+        if (musicPlayer && musicPlayer.isPlaying)
+            musicPlayer.Stop();
+    }
+
+    void PlaySound(AudioClip clip)
+    {
+        if (audioSource && clip)
+            audioSource.PlayOneShot(clip, 0.35f);
+    }
 
     void ShowPanel(GameObject panel)
     {
