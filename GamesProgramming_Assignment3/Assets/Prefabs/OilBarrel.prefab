@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 956143485801074339}
   - component: {fileID: 1601740931663436532}
   - component: {fileID: 1340988401575773156}
+  - component: {fileID: 1956171908342561154}
   m_Layer: 0
   m_Name: OilBarrel
   m_TagString: OilBarrel
@@ -150,3 +151,17 @@ MonoBehaviour:
   oilEffectPrefab: {fileID: 8170740096569154068, guid: 970d1de4ec57bbf44bc9e960d663fc9e, type: 3}
   effectDuration: 3
   canvasTransform: {fileID: 0}
+--- !u!114 &1956171908342561154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8034983692015161990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e5963b1be1604d49b05b44793dace30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  leftDespawnX: -30
