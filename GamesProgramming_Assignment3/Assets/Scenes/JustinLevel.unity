@@ -266,7 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &26582393
 GameObject:
@@ -415,7 +415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &30827723 stripped
 GameObject:
@@ -582,7 +582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.3
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &46690362
 GameObject:
@@ -1298,8 +1298,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf7448f59888d3ecda5c328a5d435d52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bagSlider: {fileID: 2081193182}
-  bagText: {fileID: 733463422}
+  bagSlider: {fileID: 0}
+  bagText: {fileID: 0}
   requiredBags: 12
 --- !u!4 &175663472
 Transform:
@@ -1463,7 +1463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &199719088
 GameObject:
@@ -1732,7 +1732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &292349258
 GameObject:
@@ -1881,7 +1881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1001 &314579705
 PrefabInstance:
@@ -1893,11 +1893,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4474444778432687081, guid: f367ba56e5c721a3787abefb2feed911, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 41.3
+      value: 79.96
       objectReference: {fileID: 0}
     - target: {fileID: 4474444778432687081, guid: f367ba56e5c721a3787abefb2feed911, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.7200003
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4474444778432687081, guid: f367ba56e5c721a3787abefb2feed911, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1960,7 +1960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &316866529
 GameObject:
@@ -2177,7 +2177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1001 &361623802
 PrefabInstance:
@@ -2189,11 +2189,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4474444778432687081, guid: f367ba56e5c721a3787abefb2feed911, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40.36
+      value: 65.38
       objectReference: {fileID: 0}
     - target: {fileID: 4474444778432687081, guid: f367ba56e5c721a3787abefb2feed911, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.67
+      value: 0.24
       objectReference: {fileID: 0}
     - target: {fileID: 4474444778432687081, guid: f367ba56e5c721a3787abefb2feed911, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2256,7 +2256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1001 &458658392
 PrefabInstance:
@@ -2403,7 +2403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &485345765
 GameObject:
@@ -2780,7 +2780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &527544398
 GameObject:
@@ -3129,7 +3129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.2
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &619394800
 GameObject:
@@ -3859,7 +3859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.2
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1001 &811215532
 PrefabInstance:
@@ -3938,7 +3938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &839998290 stripped
 GameObject:
@@ -4198,7 +4198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &874307774
 GameObject:
@@ -4831,7 +4831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1001 &991754533
 PrefabInstance:
@@ -4910,7 +4910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &1058412031
 GameObject:
@@ -5059,7 +5059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1001 &1088505088
 PrefabInstance:
@@ -5138,7 +5138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &1104236429
 GameObject:
@@ -5287,7 +5287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1001 &1121120741
 PrefabInstance:
@@ -5299,11 +5299,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4474444778432687081, guid: f367ba56e5c721a3787abefb2feed911, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 39.4
+      value: 72.42
       objectReference: {fileID: 0}
     - target: {fileID: 4474444778432687081, guid: f367ba56e5c721a3787abefb2feed911, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.69
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4474444778432687081, guid: f367ba56e5c721a3787abefb2feed911, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5366,7 +5366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &1123243835 stripped
 GameObject:
@@ -6055,7 +6055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.3
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1001 &1208896192
 PrefabInstance:
@@ -6198,7 +6198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &1242233280 stripped
 GameObject:
@@ -6295,7 +6295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &1307541120
 GameObject:
@@ -6523,7 +6523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &1330421945
 GameObject:
@@ -6584,17 +6584,17 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1724091417
-  m_SortingLayer: 0
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: -715225837736738397, guid: 401cb58369f6a1791bc52d41f3ef2804, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 25.92, y: 11.681719}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1330421947
@@ -6606,8 +6606,8 @@ Transform:
   m_GameObject: {fileID: 1330421945}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 413, y: 265, z: 0}
-  m_LocalScale: {x: 32, y: 44, z: 1}
+  m_LocalPosition: {x: 55.4, y: -5.4, z: 0}
+  m_LocalScale: {x: 5, y: 2.9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -6841,7 +6841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.2
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &1398047388
 GameObject:
@@ -6990,7 +6990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &1438188349
 GameObject:
@@ -7158,6 +7158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelButtons: []
+  requirementLabels: []
 --- !u!4 &1493184055
 Transform:
   m_ObjectHideFlags: 0
@@ -7351,7 +7352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.2
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1001 &1559656108
 PrefabInstance:
@@ -7430,7 +7431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &1578066821
 GameObject:
@@ -7805,7 +7806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &1615416806
 GameObject:
@@ -7954,7 +7955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &1639102557
 GameObject:
@@ -8236,7 +8237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.2
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &1677530998
 GameObject:
@@ -8460,7 +8461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &1705759682
 GameObject:
@@ -8994,7 +8995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.2
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &1807446620
 GameObject:
@@ -9143,7 +9144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.3
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &1808881973
 GameObject:
@@ -9631,7 +9632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &1840371335
 GameObject:
@@ -10025,7 +10026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &1896593316
 GameObject:
@@ -10337,7 +10338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &1934509976 stripped
 GameObject:
@@ -10438,7 +10439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1 &1989403967
 GameObject:
@@ -11766,7 +11767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52170d6cacccf12a6a1f088837ae34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportMargin: 0.15
+  viewportMargin: 0.1
   pauseAnimator: 1
 --- !u!1001 &4235688188223937346
 PrefabInstance:
