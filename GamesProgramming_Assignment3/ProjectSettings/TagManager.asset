@@ -11,6 +11,9 @@ TagManager:
   - Bag
   - SlowGround
   - Ice
+  - Splash
+  - Item
+  - OilBarrel
   layers:
   - Default
   - TransparentFX
