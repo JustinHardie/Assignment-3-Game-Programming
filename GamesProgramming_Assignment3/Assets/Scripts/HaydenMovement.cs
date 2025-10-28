@@ -16,16 +16,12 @@ public class HaydenMovement : MonoBehaviour
         // Get splash sprite renderer if not assigned in Inspector
         if (!splashSR)
             splashSR = GameObject.FindGameObjectWithTag("Splash")?.GetComponent<SpriteRenderer>();
+
+        audioSource = GetComponent<AudioSource>();
     }
-    private bool isGrounded = false;
     public AudioClip jumpSound; 
     private AudioSource audioSource;
 
-    void Start()
-    {
-        // Assign the AudioSource component
-        audioSource = GetComponent<AudioSource>();
-    }
     
     void Update()
     {
