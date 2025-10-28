@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class BagProgressBar : MonoBehaviour
 {
@@ -15,14 +16,28 @@ public class BagProgressBar : MonoBehaviour
 
     void Start()
     {
-        // Load saved total from ItemBank if available
-        if (ItemBank.Instance != null)
-        {
-            currentBags = ItemBank.Instance.TotalItems % requiredBags;
-        }
+        // Reset counter each time the level loads
+        currentBags = 0;
 
+        // Slider setup
         bagSlider.maxValue = requiredBags;
         bagSlider.value = currentBags;
+        UpdateText();
+
+        // Optional: listen for scene reloads if needed
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Reset UI again in case this persists across reloads
+        currentBags = 0;
+        bagSlider.value = 0;
         UpdateText();
     }
 
