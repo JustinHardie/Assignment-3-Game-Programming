@@ -39,25 +39,45 @@ public class PlayerHealth : MonoBehaviour
     }
 
     public void TakeDamage(int dmg)
+{
+    if (isDead) return;
+
+    int finalDamage = dmg; // default 1
+
+    if (DifficultyManager.Instance)
     {
-        if (isDead) return;
-
-        CurrentHealth = Mathf.Max(0, CurrentHealth - dmg);
-        Notify();
-
-        if (hitSound != null && audioSource != null)
+        switch (DifficultyManager.Instance.Current)
         {
-            audioSource.pitch = UnityEngine.Random.Range(0.95f, 1.05f);
-            audioSource.PlayOneShot(hitSound);
+            case Difficulty.Easy:
+                finalDamage = 1; // 3 hits to die
+                break;
+            case Difficulty.Medium:
+                finalDamage = 2; // 2 hits to die
+                break;
+            case Difficulty.Hard:
+                finalDamage = 3; // 1 hit to die
+                break;
         }
-
-        // Flash red
-        if (sr != null)
-            StartCoroutine(FlashRed(flashDuration));
-
-        if (CurrentHealth <= 0)
-            Die();
     }
+
+    CurrentHealth = Mathf.Max(0, CurrentHealth - finalDamage);
+    Notify();
+
+    // Play hit sound
+    if (hitSound != null && audioSource != null)
+    {
+        audioSource.pitch = UnityEngine.Random.Range(0.95f, 1.05f);
+        audioSource.PlayOneShot(hitSound);
+    }
+
+    // Flash red
+    if (sr != null)
+        StartCoroutine(FlashRed(flashDuration));
+
+    if (CurrentHealth <= 0)
+        Die();
+}
+
 
     private IEnumerator FlashRed(float duration)
     {
