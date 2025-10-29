@@ -2933,14 +2933,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 628293698}
         m_TargetAssemblyTypeName: LevelMenu3D, Assembly-CSharp
-        m_MethodName: OnStartClick
-        m_Mode: 1
+        m_MethodName: LoadLevelByName
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: OptionsMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &828433857
@@ -6822,14 +6822,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 628293698}
         m_TargetAssemblyTypeName: LevelMenu3D, Assembly-CSharp
-        m_MethodName: OnStartClick
-        m_Mode: 1
+        m_MethodName: LoadLevelByName
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: CreditsLevel
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1962036072
