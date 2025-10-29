@@ -969,6 +969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelButtons: []
+  requirementLabels: []
 --- !u!4 &288543653
 Transform:
   m_ObjectHideFlags: 0
@@ -5873,12 +5874,24 @@ PrefabInstance:
       value: NextLevelButton
       objectReference: {fileID: 0}
     - target: {fileID: 7816419574480133803, guid: 766aa3eca1eec4b458789e3612b3ebef, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7816419574480133803, guid: 766aa3eca1eec4b458789e3612b3ebef, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 288543652}
     - target: {fileID: 7816419574480133803, guid: 766aa3eca1eec4b458789e3612b3ebef, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadLevelByName
+      objectReference: {fileID: 0}
+    - target: {fileID: 7816419574480133803, guid: 766aa3eca1eec4b458789e3612b3ebef, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7816419574480133803, guid: 766aa3eca1eec4b458789e3612b3ebef, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: JackLevel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
