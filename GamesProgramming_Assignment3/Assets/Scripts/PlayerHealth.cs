@@ -1,8 +1,11 @@
 using UnityEngine;
 using TMPro;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 using System; // for Action
 =======
+=======
+>>>>>>> Stashed changes
 using System;
 using System.Collections;
 >>>>>>> Stashed changes
@@ -46,10 +49,13 @@ public class PlayerHealth : MonoBehaviour
     {
         CurrentHealth = maxHealth;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         rb  = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
         sr  = GetComponent<SpriteRenderer>();
 =======
+=======
+>>>>>>> Stashed changes
 
         rb3D = GetComponent<Rigidbody>();
         col3D = GetComponent<Collider>();
@@ -60,6 +66,9 @@ public class PlayerHealth : MonoBehaviour
 
         audioSource = GetComponent<AudioSource>() ?? gameObject.AddComponent<AudioSource>();
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         Notify();
     }
@@ -67,7 +76,12 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int dmg)
     {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         if (isDead) return;
+=======
+        if (isDead || recentlyHit) return;
+        StartCoroutine(HitCooldown());
+>>>>>>> Stashed changes
 =======
         if (isDead || recentlyHit) return;
         StartCoroutine(HitCooldown());
@@ -77,9 +91,12 @@ public class PlayerHealth : MonoBehaviour
         Notify();
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         if (CurrentHealth <= 0)
             Die();
 =======
+=======
+>>>>>>> Stashed changes
         if (hitSound) audioSource.PlayOneShot(hitSound);
 
         StartCoroutine(FlashRed(flashDuration));
@@ -146,6 +163,9 @@ public class PlayerHealth : MonoBehaviour
             if (!sr) continue;
             sr.color = savedSpriteColors[i];
         }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     }
 

@@ -2885,7 +2885,11 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 332, y: 48}
+=======
+  m_AnchoredPosition: {x: 572, y: 30}
+>>>>>>> Stashed changes
 =======
   m_AnchoredPosition: {x: 572, y: 30}
 >>>>>>> Stashed changes
@@ -3436,7 +3440,11 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 332, y: -1}
+=======
+  m_AnchoredPosition: {x: 570, y: -50}
+>>>>>>> Stashed changes
 =======
   m_AnchoredPosition: {x: 570, y: -50}
 >>>>>>> Stashed changes
@@ -5573,7 +5581,11 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 332, y: 92}
+=======
+  m_AnchoredPosition: {x: 569, y: 109}
+>>>>>>> Stashed changes
 =======
   m_AnchoredPosition: {x: 569, y: 109}
 >>>>>>> Stashed changes
@@ -6786,7 +6798,11 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 332, y: -48}
+=======
+  m_AnchoredPosition: {x: 571, y: -136}
+>>>>>>> Stashed changes
 =======
   m_AnchoredPosition: {x: 571, y: -136}
 >>>>>>> Stashed changes
