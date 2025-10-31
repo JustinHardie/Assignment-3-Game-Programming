@@ -1,4 +1,4 @@
-Here are the instructions on how to run the project:
+**Here are the instructions on how to run the project:
 
 1. Install the unity version: 6000.0.54f1
 2. Create a new project within unity (ideally call the project the same as our project, just in case of any conflicts/problems)
@@ -6,17 +6,17 @@ Here are the instructions on how to run the project:
 4. copy the extracted folder to the "GamesProgramming_Assignment2" folder, if asked just replace any already existing files.
 5. now our project should appear and be playable.
 
-Controls:
+**Controls:
 Level 1 - Space to Jump
 Level 2 & 3 - A, D, (left and right movement respectively), Space to Jump.
 
-Contributions:
+**Contributions:
 Aditya Suthar - 
 Hayden Janecic - 
 Jack Alonte - Improvements on Level 2 (Desert level), Audio additions, UI improvements 
-Justin Hardie - Level 3 (Forest level), 3 Physics Materials (Slippery, Grippy, Trampoline), HUD (Hearts and Bag counter functionality).
+Justin Hardie - Added a Difficulty changer(Easy, Medium and Hard), added persistant storage of items collected within a JSON file, added a progress bar to each level that tracks the amount of bags collected, Updated Level 3 based on feedback, added functionality to level buttons (added the bag requirments to levels 2, 3 and 4/ updated code and buttons that transition between scenes), Created and wrote the "About" page.
 
-Part 1 feedback addressed and what I worked on (JACK ALONTE):
+**Part 1 feedback addressed and what I worked on (JACK ALONTE):
 SOUND AND AUDIO
 - Every scene now has background music. (Relates to: Audio & Immersion — “Use ambient or thematic audio to set the tone.”)
 - Win and game over sounds have been added to the corresponding screens; background music is muted during these to avoid audio conflicts. (Relates to: Game Flow & Audio Clarity — “Ensure polished presentation and avoid overlapping sounds.”)
@@ -34,6 +34,8 @@ GAMEPLAY AND LEVEL DESIGN
 - To clarify the SDG theme and the level's objectives, an introduction was added as well as some concluding text when the player wins. (Relates to: Thematic Focus — “Add reflections or narration to reinforce the educational message.”)
 
 *end of Jack's section*
+
+**Justin's Section (Improvments made):
 
 
 Innovation features:
