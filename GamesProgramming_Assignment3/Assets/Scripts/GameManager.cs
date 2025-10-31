@@ -17,20 +17,13 @@ public class GameManager : MonoBehaviour
     public GameObject losePanel;         // set inactive in the scene
 
     [Header("Audio (optional)")]
-    public AudioSource audioSource;      // optional
-    public AudioClip winSound;           // optional
-    public AudioClip loseSound;          // optional
-    public AudioSource musicPlayer;      // optional background music
-
-    [Header("Options")]
-    public bool persistent = false;      // set true only if you want this to persist across scenes
-    [Header("Audio")]
-    [SerializeField] private AudioSource audioSource; // drag in the Inspector
+    [SerializeField] private AudioSource audioSource; 
     [SerializeField] private AudioClip winSound;
     [SerializeField] private AudioClip loseSound;
     private AudioSource musicPlayer;
 
-    void Awake()
+    [Header("Options")]
+    public bool persistent = false;      
 
     // -------- State --------
     public int CollectedBags { get; private set; } = 0;
@@ -38,17 +31,7 @@ public class GameManager : MonoBehaviour
 
     // -------- Lifecycle --------
     private void Awake()
-
-
-    // -------- State --------
-    public int CollectedBags { get; private set; } = 0;
-    public bool IsGameOver { get; private set; } = false;
-
-    // -------- Lifecycle --------
-    private void Awake()
-
     {
-        // Basic singleton pattern
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -62,17 +45,15 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        // Ensure panels start hidden
         if (winPanel) winPanel.SetActive(false);
         if (losePanel) losePanel.SetActive(false);
 
-        // Reset run state
         Time.timeScale = 1f;
         IsGameOver = false;
         CollectedBags = Mathf.Clamp(CollectedBags, 0, targetBags);
 
         UpdateBagUI();
-        
+
         GameObject musicObject = GameObject.Find("MusicPlayer");
         if (musicObject)
             musicPlayer = musicObject.GetComponent<AudioSource>();
@@ -82,39 +63,6 @@ public class GameManager : MonoBehaviour
     public void AddBag()
     {
         if (IsGameOver) return;
-    public void Win()
-    {
-        StopMusic();
-        PlaySound(winSound);
-        ShowPanel(winPanel);
-    }
-
-    public void Lose()
-    {
-        StopMusic();
-        PlaySound(loseSound);
-        ShowPanel(losePanel);
-    }
-
-    void StopMusic()
-    {
-        if (musicPlayer && musicPlayer.isPlaying)
-            musicPlayer.Stop();
-    }
-
-    void PlaySound(AudioClip clip)
-    {
-        if (audioSource && clip)
-            audioSource.PlayOneShot(clip, 0.35f);
-    }
-
-    void ShowPanel(GameObject panel)
-    {
-        if (panel) panel.SetActive(true);
-        Time.timeScale = 0f; // pause so game action stops
-    }
-
-    // Hook these to UI buttons
 
         CollectedBags = Mathf.Min(CollectedBags + 1, targetBags);
         UpdateBagUI();
@@ -148,8 +96,8 @@ public class GameManager : MonoBehaviour
     public void ReplayLevel()
     {
         Time.timeScale = 1f;
-        var scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(scene.buildIndex);
+        Scene current = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(current.buildIndex);
     }
 
     public void GoToMenu()
@@ -158,7 +106,6 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("3Dmenu");
     }
 
-    // Optional helper if you change targets at runtime
     public void SetTargetBags(int value)
     {
         targetBags = Mathf.Max(0, value);
@@ -171,12 +118,14 @@ public class GameManager : MonoBehaviour
     {
         if (bagCounterText)
             bagCounterText.text = $"Bags: {CollectedBags}/{targetBags}";
+        else
+            Debug.LogWarning("[GameManager] bagCounterText not assigned!");
     }
 
     private void ShowPanelAndPause(GameObject panel)
     {
         if (panel) panel.SetActive(true);
-        Time.timeScale = 0f; // pause gameplay
+        Time.timeScale = 0f;
     }
 
     private void StopMusicIfAny()
