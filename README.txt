@@ -11,7 +11,7 @@ Level 1 - Space to Jump
 Level 2 & 3 - A, D, (left and right movement respectively), Space to Jump.
 
 **Contributions:
-Aditya Suthar - 
+Aditya Suthar - Created the 3D Main Menu and 3D Level, Implemented the 3D character (Dyp the Penguin) from the Unity Asset Store, Developed the health system (hearts UI + damage feedback), Added camera follow system to track the player, Implemented spike obstacles with player damage and visual feedback, Created Win, Lose, and Pause screens with working logic, Integrated bag collection system for win condition, Used environment assets such as trees, fences, and rocks to enhance the 3D level’s design.
 Hayden Janecic - 
 Jack Alonte - Improvements on Level 2 (Desert level), Audio additions, UI improvements 
 Justin Hardie - Added a Difficulty changer(Easy, Medium and Hard), added persistant storage of items collected within a JSON file, added a progress bar to each level that tracks the amount of bags collected, Updated Level 3 based on feedback, added functionality to level buttons (added the bag requirments to levels 2, 3 and 4/ updated code and buttons that transition between scenes), Created and wrote the "About" page.
@@ -36,6 +36,12 @@ GAMEPLAY AND LEVEL DESIGN
 *end of Jack's section*
 
 **Justin's Section (Improvments made):
+ - I added a difficulty selection system with Easy, Medium, and Hard modes. Each mode changes how much damage the player takes.
+ - To make progress carry across levels, I implemented persistent item saving using a JSON file. Players can now keep their collected bags between levels, which ties into the overall progression and level unlocking system.
+ - I also added a progress bar to each level, so players can clearly see how many bags they’ve collected out of the total needed.
+ - I reworked Level 3 based on the feedback we received, improving its layout and pacing to make it more enjoyable and better aligned with the rest of the game.
+ - I updated the level select menu to make the progression system more meaningful. Levels 2, 3, and 4 now unlock only when players have collected a set number of bags, and all buttons now work properly to transition between scenes.
+ - I wrote the “About” page, explaining the game’s goals and how it connects to the SDG theme.
 
 
 Innovation features:
