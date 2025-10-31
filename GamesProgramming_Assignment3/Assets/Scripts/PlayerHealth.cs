@@ -1,14 +1,9 @@
 using UnityEngine;
 using TMPro;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-using System; // for Action
-=======
-=======
->>>>>>> Stashed changes
 using System;
 using System.Collections;
->>>>>>> Stashed changes
+using System.Collections;
+
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -16,19 +11,20 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 3;
     public TMP_Text healthText;
 
-<<<<<<< Updated upstream
-=======
     [Header("Audio")]
     public AudioClip hitSound;
     private AudioSource audioSource;
 
     [Header("Damage Feedback")]
+
     [Tooltip("How long the red flash lasts")]
     public float flashDuration = 0.12f;
     [Tooltip("Prevents multiple hits in the same overlap")]
     public float hitCooldown = 0.2f;
 
->>>>>>> Stashed changes
+
+    public float flashDuration = 0.2f;
+
     public int CurrentHealth { get; private set; }
     public event Action<int, int> OnHealthChanged;
 
@@ -48,14 +44,9 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         CurrentHealth = maxHealth;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
         rb  = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
         sr  = GetComponent<SpriteRenderer>();
-=======
-=======
->>>>>>> Stashed changes
 
         rb3D = GetComponent<Rigidbody>();
         col3D = GetComponent<Collider>();
@@ -65,38 +56,44 @@ public class PlayerHealth : MonoBehaviour
         mpb = new MaterialPropertyBlock();
 
         audioSource = GetComponent<AudioSource>() ?? gameObject.AddComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
+        if (!audioSource)
+            audioSource = gameObject.AddComponent<AudioSource>();
 
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
         Notify();
     }
 
     public void TakeDamage(int dmg)
+{
+    if (isDead) return;
+
+    int finalDamage = dmg; // default 1
+
+    if (DifficultyManager.Instance)
     {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        if (isDead) return;
-=======
         if (isDead || recentlyHit) return;
         StartCoroutine(HitCooldown());
->>>>>>> Stashed changes
-=======
+
         if (isDead || recentlyHit) return;
         StartCoroutine(HitCooldown());
->>>>>>> Stashed changes
+        switch (DifficultyManager.Instance.Current)
+        {
+            case Difficulty.Easy:
+                finalDamage = 1; // 3 hits to die
+                break;
+            case Difficulty.Medium:
+                finalDamage = 2; // 2 hits to die
+                break;
+            case Difficulty.Hard:
+                finalDamage = 3; // 1 hit to die
+                break;
+        }
+    }
 
-        CurrentHealth = Mathf.Max(0, CurrentHealth - dmg);
-        Notify();
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        if (CurrentHealth <= 0)
-            Die();
-=======
-=======
->>>>>>> Stashed changes
+    CurrentHealth = Mathf.Max(0, CurrentHealth - finalDamage);
+    Notify();
+
         if (hitSound) audioSource.PlayOneShot(hitSound);
 
         StartCoroutine(FlashRed(flashDuration));
@@ -163,10 +160,29 @@ public class PlayerHealth : MonoBehaviour
             if (!sr) continue;
             sr.color = savedSpriteColors[i];
         }
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+    // Play hit sound
+    if (hitSound != null && audioSource != null)
+    {
+        audioSource.pitch = UnityEngine.Random.Range(0.95f, 1.05f);
+        audioSource.PlayOneShot(hitSound);
+    }
+
+    // Flash red
+    if (sr != null)
+        StartCoroutine(FlashRed(flashDuration));
+
+    if (CurrentHealth <= 0)
+        Die();
+}
+
+
+    private IEnumerator FlashRed(float duration)
+    {
+        Color originalColor = sr.color;
+        sr.color = Color.red;           // turn red
+        yield return new WaitForSeconds(duration);
+        sr.color = originalColor;       // revert to original
+
     }
 
     void Notify()

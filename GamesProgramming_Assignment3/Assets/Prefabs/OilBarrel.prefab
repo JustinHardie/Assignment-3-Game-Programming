@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 956143485801074339}
   - component: {fileID: 1601740931663436532}
   - component: {fileID: 1340988401575773156}
+  - component: {fileID: 1956171908342561154}
   m_Layer: 0
   m_Name: OilBarrel
-  m_TagString: Untagged
+  m_TagString: OilBarrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,9 +76,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: -537505389
+  m_SortingLayer: 5
+  m_SortingOrder: 2
   m_Sprite: {fileID: 5711512529572764897, guid: a74111491c2fbb0448d0f804e0db6def, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -150,3 +151,17 @@ MonoBehaviour:
   oilEffectPrefab: {fileID: 8170740096569154068, guid: 970d1de4ec57bbf44bc9e960d663fc9e, type: 3}
   effectDuration: 3
   canvasTransform: {fileID: 0}
+--- !u!114 &1956171908342561154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8034983692015161990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e5963b1be1604d49b05b44793dace30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  leftDespawnX: -30

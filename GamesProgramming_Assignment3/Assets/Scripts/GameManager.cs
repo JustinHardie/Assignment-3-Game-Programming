@@ -24,19 +24,13 @@ public class GameManager : MonoBehaviour
 
     [Header("Options")]
     public bool persistent = false;      // set true only if you want this to persist across scenes
-<<<<<<< Updated upstream
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource; // drag in the Inspector
+    [SerializeField] private AudioClip winSound;
+    [SerializeField] private AudioClip loseSound;
+    private AudioSource musicPlayer;
 
-<<<<<<< Updated upstream
     void Awake()
-=======
-    // -------- State --------
-    public int CollectedBags { get; private set; } = 0;
-    public bool IsGameOver { get; private set; } = false;
-
-    // -------- Lifecycle --------
-    private void Awake()
->>>>>>> Stashed changes
-=======
 
     // -------- State --------
     public int CollectedBags { get; private set; } = 0;
@@ -44,7 +38,15 @@ public class GameManager : MonoBehaviour
 
     // -------- Lifecycle --------
     private void Awake()
->>>>>>> Stashed changes
+
+
+    // -------- State --------
+    public int CollectedBags { get; private set; } = 0;
+    public bool IsGameOver { get; private set; } = false;
+
+    // -------- Lifecycle --------
+    private void Awake()
+
     {
         // Basic singleton pattern
         if (Instance != null && Instance != this)
@@ -70,25 +72,41 @@ public class GameManager : MonoBehaviour
         CollectedBags = Mathf.Clamp(CollectedBags, 0, targetBags);
 
         UpdateBagUI();
+        
+        GameObject musicObject = GameObject.Find("MusicPlayer");
+        if (musicObject)
+            musicPlayer = musicObject.GetComponent<AudioSource>();
     }
 
     // -------- Public API --------
     public void AddBag()
     {
         if (IsGameOver) return;
-<<<<<<< Updated upstream
-
-        CollectedBags = Mathf.Min(CollectedBags + 1, targetBags);
-        UpdateBagUI();
-
-        if (CollectedBags >= targetBags)
-            Win();
+    public void Win()
+    {
+        StopMusic();
+        PlaySound(winSound);
+        ShowPanel(winPanel);
     }
 
-<<<<<<< Updated upstream
-    public void Win() => ShowPanel(winPanel);
+    public void Lose()
+    {
+        StopMusic();
+        PlaySound(loseSound);
+        ShowPanel(losePanel);
+    }
 
-    public void Lose() => ShowPanel(losePanel);
+    void StopMusic()
+    {
+        if (musicPlayer && musicPlayer.isPlaying)
+            musicPlayer.Stop();
+    }
+
+    void PlaySound(AudioClip clip)
+    {
+        if (audioSource && clip)
+            audioSource.PlayOneShot(clip, 0.35f);
+    }
 
     void ShowPanel(GameObject panel)
     {
@@ -97,8 +115,6 @@ public class GameManager : MonoBehaviour
     }
 
     // Hook these to UI buttons
-=======
-=======
 
         CollectedBags = Mathf.Min(CollectedBags + 1, targetBags);
         UpdateBagUI();
@@ -107,7 +123,6 @@ public class GameManager : MonoBehaviour
             Win();
     }
 
->>>>>>> Stashed changes
     public void Win()
     {
         if (IsGameOver) return;
@@ -130,10 +145,6 @@ public class GameManager : MonoBehaviour
         Debug.Log("[GameManager] LOSE");
     }
 
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
     public void ReplayLevel()
     {
         Time.timeScale = 1f;

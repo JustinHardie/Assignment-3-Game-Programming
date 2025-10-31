@@ -23,6 +23,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AdityaLevel.unity
     guid: ad31b296b39aa7a42916f8beea41a48e
+  - enabled: 1
+    path: Assets/Scenes/AboutMenu.unity
+    guid: c826d55af86af5f7da2e81c4fd7dd9ef
+  - enabled: 1
+    path: Assets/Scenes/MenuSettings.unity
+    guid: 13a34bd1ff4e560a09789570aa78e186
+  - enabled: 1
+    path: Assets/Scenes/CreditsLevel.unity
+    guid: f89766eda7eecd643b5155ab103a356b
+  - enabled: 1
+    path: Assets/Scenes/OptionsMenu.unity
+    guid: e6d043e7c00494244bf238358e3dcdf0
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

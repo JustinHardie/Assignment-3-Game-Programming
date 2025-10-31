@@ -9,4 +9,9 @@ public class LevelMenu3D : MonoBehaviour
         SceneManager.LoadScene("LevelSelectorScene");
 
     }
+
+    public void LoadLevelByName(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
 }
