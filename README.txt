@@ -1,4 +1,4 @@
-Here are the instructions on how to run the project:
+**Here are the instructions on how to run the project:
 
 1. Install the unity version: 6000.0.54f1
 2. Create a new project within unity (ideally call the project the same as our project, just in case of any conflicts/problems)
@@ -6,17 +6,17 @@ Here are the instructions on how to run the project:
 4. copy the extracted folder to the "GamesProgramming_Assignment2" folder, if asked just replace any already existing files.
 5. now our project should appear and be playable.
 
-Controls:
+**Controls:
 Level 1 - Space to Jump
 Level 2 & 3 - A, D, (left and right movement respectively), Space to Jump.
 
-Contributions:
-Aditya Suthar - 
+**Contributions:
+Aditya Suthar - Created the 3D Main Menu and 3D Level, Implemented the 3D character (Dyp the Penguin) from the Unity Asset Store, Developed the health system (hearts UI + damage feedback), Added camera follow system to track the player, Implemented spike obstacles with player damage and visual feedback, Created Win, Lose, and Pause screens with working logic, Integrated bag collection system for win condition, Used environment assets such as trees, fences, and rocks to enhance the 3D level’s design.
 Hayden Janecic - 
 Jack Alonte - Improvements on Level 2 (Desert level), Audio additions, UI improvements 
-Justin Hardie - Level 3 (Forest level), 3 Physics Materials (Slippery, Grippy, Trampoline), HUD (Hearts and Bag counter functionality).
+Justin Hardie - Added a Difficulty changer(Easy, Medium and Hard), added persistant storage of items collected within a JSON file, added a progress bar to each level that tracks the amount of bags collected, Updated Level 3 based on feedback, added functionality to level buttons (added the bag requirments to levels 2, 3 and 4/ updated code and buttons that transition between scenes), Created and wrote the "About" page.
 
-Part 1 feedback addressed and what I worked on (JACK ALONTE):
+**Part 1 feedback addressed and what I worked on (JACK ALONTE):
 SOUND AND AUDIO
 - Every scene now has background music. (Relates to: Audio & Immersion — “Use ambient or thematic audio to set the tone.”)
 - Win and game over sounds have been added to the corresponding screens; background music is muted during these to avoid audio conflicts. (Relates to: Game Flow & Audio Clarity — “Ensure polished presentation and avoid overlapping sounds.”)
@@ -34,6 +34,14 @@ GAMEPLAY AND LEVEL DESIGN
 - To clarify the SDG theme and the level's objectives, an introduction was added as well as some concluding text when the player wins. (Relates to: Thematic Focus — “Add reflections or narration to reinforce the educational message.”)
 
 *end of Jack's section*
+
+**Justin's Section (Improvments made):
+ - I added a difficulty selection system with Easy, Medium, and Hard modes. Each mode changes how much damage the player takes.
+ - To make progress carry across levels, I implemented persistent item saving using a JSON file. Players can now keep their collected bags between levels, which ties into the overall progression and level unlocking system.
+ - I also added a progress bar to each level, so players can clearly see how many bags they’ve collected out of the total needed.
+ - I reworked Level 3 based on the feedback we received, improving its layout and pacing to make it more enjoyable and better aligned with the rest of the game.
+ - I updated the level select menu to make the progression system more meaningful. Levels 2, 3, and 4 now unlock only when players have collected a set number of bags, and all buttons now work properly to transition between scenes.
+ - I wrote the “About” page, explaining the game’s goals and how it connects to the SDG theme.
 
 
 Innovation features:
